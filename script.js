@@ -2,7 +2,8 @@ const input = document.querySelector('.input input');
 const output = document.querySelectorAll('.output fieldset p');
 const wordCount = document.querySelector('.wordCount span');
 const reset = document.querySelector('.reset button');
-
+const copyBtn = document.querySelectorAll('.copyBtn');
+let hideCopiedText;
 
 input.addEventListener('input', (e)=>{
     let userInput = e.target.value.trim();
@@ -81,3 +82,18 @@ function showOutput(userInput){
     let trim = userInput.split(" ").join("");
     output[6].innerText = trim;
 }
+
+
+copyBtn.forEach((btn) => {
+    btn.addEventListener('click', (e)=>{
+        if(Number(wordCount.innerText) > 0){
+            navigator.clipboard.writeText(e.currentTarget.previousElementSibling.lastElementChild.innerText)  
+            e.currentTarget.lastElementChild.classList.contains('none') &&  e.currentTarget.lastElementChild.classList.remove('none');  
+            hideCopiedText = e.currentTarget.lastElementChild
+            setTimeout(()=>{
+                hideCopiedText.classList.contains('none') || hideCopiedText.classList.add('none');  
+            }, 3000)   
+        }
+        
+    })
+})

@@ -153,3 +153,13 @@ fieldset p{
     }
 }
 
+
+@media(max-width: 412px){
+    .copyBtn{
+        width: 20px;
+    }
+
+    i{
+        padding: 4px;
+    }
+}

@@ -1,5 +1,5 @@
 const input = document.querySelector('.input input');
-const output = document.querySelectorAll('.output p');
+const output = document.querySelectorAll('.output fieldset p');
 const wordCount = document.querySelector('.wordCount span');
 const reset = document.querySelector('.reset button');
 
@@ -64,9 +64,13 @@ function showOutput(userInput){
 
     
     // snake_case
+
+    console.log("hi");
+    
     let snake = userInput.split(" ").join("_");
     output[4].innerText = snake
-
+    
+    console.log("hi");
 
     // kebab-case
     let kebab = userInput.split(" ").join("-");

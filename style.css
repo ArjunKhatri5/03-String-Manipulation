@@ -3,8 +3,19 @@
     box-sizing: border-box;
 }
 
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
 body{
     width: 100%;
+    min-height: 100vh;
     background: linear-gradient(115deg, #2c3e50, #58b8c7);
     display: flex;
     justify-content: center;
@@ -17,26 +28,18 @@ main{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    overflow: scroll;
-    padding: 20px;
-}
-
-
-main::-webkit-scrollbar {
-    display: none;
-}
-
-main {
-    -ms-overflow-style: none;  
-    scrollbar-width: none; 
 }
 
 
 .container{
+    margin-top: 18px ;
+    width: 50%;
+    overflow: scroll;
     background-color: beige;
-    width: 60%;
-    padding: 25px 10px;
+    padding: 10px;
     border-radius: 4px;
+    max-height: fit-content;
+    overflow: scroll;
 }
 
 
@@ -74,8 +77,7 @@ input::placeholder{
 
 
 .copyBtn{
-    width: 45px;
-    height: 45px;
+    width: 40px;
     border-radius: 4px;
     margin-left: 5px;
     display: flex;
@@ -108,6 +110,7 @@ fieldset{
 
 fieldset p{
     word-break: break-all;
+    min-height: 20px;
 }
 
 
@@ -140,12 +143,11 @@ fieldset p{
 
 
 .developer{
-    margin-top: 25px;
-    margin-bottom: 0;
+    margin-top: 5px;
 }
 
 
-@media(max-width: 768px){
+@media(max-width: 1024px){
     .container{
         width: 90%;
     }

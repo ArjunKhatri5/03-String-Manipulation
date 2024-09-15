@@ -17,7 +17,7 @@ main{
 
 .container{
     background-color: beige;
-    width: 50%;
+    width: 60%;
     max-height: 75%;
     padding: 25px;
     border-radius: 4px;
@@ -43,16 +43,14 @@ input::placeholder{
 
 
 .output > div{
-    height: 50px;
     margin: 10px;
 }
 
 fieldset{
-    height: 50px;
+    min-height: 50px;
     border-radius: 4px;
     background-color: white;
 }
-
 
 
 @media(max-width: 768px){

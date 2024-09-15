@@ -1,7 +1,7 @@
 const input = document.querySelector('.input input');
 const output = document.querySelectorAll('.output p');
-
 const wordCount = document.querySelector('.wordCount span');
+const reset = document.querySelector('.reset button');
 
 
 input.addEventListener('input', (e)=>{
@@ -53,8 +53,18 @@ input.addEventListener('input', (e)=>{
         let trim = userInput.split(" ").join("");
         output[6].innerText = trim;
     } else {
-        input.setAttribute('readOnly', true);
+        input.value = userInput.slice(0, 99);
+        reset.parentElement.classList.contains('hide') && reset.parentElement.classList.remove('hide');
     }
-    
+});
 
+reset.addEventListener('click', ()=>{
+    reset.parentElement.classList.contains('hide') || reset.parentElement.classList.add('hide');
+    input.hasAttribute('readOnly') && input.removeAttribute('readOnly');
+    input.value = '';
+    wordCount.innerText = 0;
+    
+    output.forEach((p) => {
+        p.innerText = ''
+    })
 });

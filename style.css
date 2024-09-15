@@ -3,7 +3,6 @@
     box-sizing: border-box;
 }
 
-
 main{
     display: flex;
     flex-direction: column;
@@ -22,6 +21,11 @@ main{
     border-radius: 4px;
 }
 
+
+.wordCount{
+    display: flex;
+    justify-content: end;
+}
 
 .input{
     width: 100%;

@@ -18,7 +18,6 @@ main{
 .container{
     background-color: beige;
     width: 60%;
-    max-height: 75%;
     padding: 25px;
     border-radius: 4px;
 }
@@ -50,6 +49,10 @@ fieldset{
     min-height: 50px;
     border-radius: 4px;
     background-color: white;
+}
+
+fieldset p{
+    word-break: break-all;
 }
 
 
